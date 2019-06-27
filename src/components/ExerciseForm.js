@@ -1,61 +1,55 @@
 import React from 'react'
 
-class ExerciseForm extends React.Component{
+class ExerciseForm extends React.Component {
 
-    state = {}
-/* ESTA ES LA FORMA DE HACER EL BIND PARA PASAR LOS PROPS EN LA MISMA INSTANCIA 
-    constructor(props){
-        super(props)
 
-        this.handleClick = this.handleClick.bind(this)
-    }
-
-    handleClick(){
-        console.log(this.props)
-    }
-    render....
-*/  
-
-    handleSubmit = (e) => (
-        e.preventDefault(),
-        console.log(this.state)
-
-    )
+    /* ESTA ES LA FORMA DE HACER EL BIND PARA PASAR LOS PROPS EN LA MISMA INSTANCIA 
+        constructor(props){
+            super(props)
     
-    render(){
-        // DESTRUCTURING EL PROPS
-        const {onChange} = this.props
-        return(
+            this.handleClick = this.handleClick.bind(this)
+        }
+    
+        handleClick(){
+            console.log(this.props)
+        }
+        render....
+    */
+
+    render() {
+        // DESTRUCTURING PROPS
+        const { onChange, onSubmit, form } = this.props
+        return (
             <div className="container">
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={onSubmit}>
                     <div className="form-group">
                         <input
                             type="text"
                             className="form-control"
                             placeholder="Title"
                             name="title"
-                            onChange={ onChange }
-                            value={this.state.title}
+                            onChange={onChange}
+                            value={form.title}
                         />
                     </div>
                     <div className="form-group">
                         <input
                             type="text"
                             className="form-control"
-                            placeholder="Title"
+                            placeholder="description"
                             name="description"
-                            onChange={ onChange }
-                            value={this.state.description}
+                            onChange={onChange}
+                            value={form.description}
                         />
                     </div>
                     <div className="form-group">
                         <input
                             type="text"
                             className="form-control"
-                            placeholder="Title"
+                            placeholder="url"
                             name="img"
-                            onChange={ onChange }
-                            value={this.state.img}
+                            onChange={onChange}
+                            value={form.img}
                         />
                     </div>
                     <div className="form-row">
@@ -63,20 +57,20 @@ class ExerciseForm extends React.Component{
                             <input
                                 type="text"
                                 className="form-control"
-                                placeholder="Title"
+                                placeholder="left Color"
                                 name="leftColor"
-                                onChange={ onChange }
-                                value={this.state.leftColor}
+                                onChange={onChange}
+                                value={form.leftColor}
                             />
                         </div>
                         <div className="col">
                             <input
                                 type="text"
                                 className="form-control"
-                                placeholder="Title"
+                                placeholder="right Color"
                                 name="rightColor"
-                                onChange={ onChange }
-                                value={this.state.rightColor}
+                                onChange={onChange}
+                                value={form.rightColor}
                             />
                         </div>
                     </div>

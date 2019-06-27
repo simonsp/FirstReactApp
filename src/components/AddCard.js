@@ -28,11 +28,13 @@ class AddCard extends React.Component{
     }
 */
 
-const AddCard = () =>(
-    <div>
-        <Link to="/exercise/new"><img className="Fitness-Add" src={ButtonImg} alt="botton para agregar ejercicio"/></Link>
-    </div>
-)
+const AddCard = () => {
+    return (
+        <div>
+            <Link to="/exercise/new"><img className="Fitness-Add" src={ButtonImg} alt="botton para agregar ejercicio" /></Link>
+        </div>
+    )
+}
 
 
 export default AddCard

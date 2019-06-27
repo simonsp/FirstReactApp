@@ -8,7 +8,8 @@ const Welcome = ({username}) => (
             <p>Let's workout to get someone gains!</p>
         </div>
     </div>
-) 
+)
+
 
 /* COMPONENTE FUNCIONAL CON PROPS (FUNCIONALES SIGNIFICA QUE NO NECESITAN CAMBIAR EL STATE DEL COMPONENTE)
 function Welcome(props){
